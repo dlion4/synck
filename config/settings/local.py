@@ -18,7 +18,7 @@ ALLOWED_HOSTS = [
     "localhost",
     "0.0.0.0",
     "127.0.0.1",
-    "synck-*.herokuapp.com",
+    "synck-8712813c94f3.herokuapp.com",
 ]  # noqa: S104
 
 # CACHES
@@ -85,6 +85,6 @@ CELERY_TASK_EAGER_PROPAGATES = True
 CORS_ALLOW_ALL_ORIGINS = True
 
 CSRF_TRUSTED_ORIGINS = [
-    "https://synck-*.herokuapp.com",
-    "http://synck-*.herokuapp.com",
+    "https://synck-8712813c94f3.herokuapp.com",
+    "http://synck-8712813c94f3.herokuapp.com",
 ]
