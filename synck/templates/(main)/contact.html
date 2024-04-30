@@ -1,0 +1,141 @@
+{% load static %}
+
+<!-- Contact -->
+<section class="contact-area" id="contact">
+  <div class="custom-container">
+    <div class="custom-row">
+      <div class="contact-form-wrap">
+        <div class="contact-form-body">
+          <h5 class="section-subtitle">Contact</h5>
+          <h1 class="section-title">Lets get in touch</h1>
+          <p>You can reach us anytime via
+            <a href="mailto:contact@synck.com">contact@synck.com</a>
+          </p>
+          <form action="{% url 'contact' %}" method="POST" class="contact-form">
+            {% csrf_token %}
+            <div class="input-row">
+              <div class="input-group">
+                <label for="{{form.first_name.id_for_label}}">{{form.first_name.label}}</label>
+                {{form.first_name}}
+              </div>
+              <div class="input-group">
+                <label for="{{form.last_name.id_for_label}}">{{form.last_name.label}}</label>
+                {{form.last_name}}
+              </div>
+            </div>
+            <div class="input-row">
+              <div class="input-group">
+                <label for="{{form.email.id_for_label}}">{{form.email.label}}</label>
+                {{form.email}}
+              </div>
+              <div class="input-group">
+                <label for="{{form.phone_number.id_for_label}}">{{form.phone_number.label}}</label>
+                {{form.phone_number}}
+              </div>
+            </div>
+
+            <div class="input-row">
+              <div class="input-group">
+                <label for="message">{{form.message.label}}</label>
+                {{form.message}}
+              </div>
+            </div>
+            <div class="input-row">
+              <div class="input-group input-checkbox">
+                <input type="checkbox" id="privacy_policy_accept" name="privacy_policy_accept">
+                <label for="privacy_policy_accept">You agree to our
+                  <a href="#">terms and conditions.</a>
+                </label>
+              </div>
+            </div>
+
+            <div class="input-row">
+              <div class="input-group">
+                <button type="submit" class="theme-btn">Get Started</button>
+              </div>
+            </div>
+            <!-- Alert Message -->
+
+          </form>
+        </div>
+      </div>
+
+      <div class="contact-experience">
+        <ul>
+          <li>
+            <h1>22+
+              <span>Years</span></h1>
+            <p>Field Experience
+            </p>
+          </li>
+          <li>
+            <h1>950+
+              <span>Projects</span></h1>
+            <p>Done Around World
+            </p>
+          </li>
+          <li>
+            <h1>99%</h1>
+            <p>Client Satisfaction</p>
+          </li>
+          <li>
+            <h1>1995+
+              <span>Year</span></h1>
+            <p>Established On</p>
+          </li>
+          <li>
+            <h1>2
+              <span>Mins</span></h1>
+            <p>Response Time</p>
+          </li>
+        </ul>
+      </div>
+
+      <div class="contact-infos">
+        <div class="contact-infos-inner">
+          <div class="contact-info">
+            <img src="{% static 'assets/imgs/support-icon.svg' %}" alt="Support">
+            <h3>Contact Info</h3>
+            <p>
+              +1 (689) 256-5817
+              <br>
+              contact@synck.com
+            </p>
+          </div>
+          <div class="contact-office-info contact-info">
+            <img src="{% static 'assets/imgs/map-icon.svg' %}" alt="Map">
+            <h3>Visit our office</h3>
+            <p>16/9, Down Street Edinburgh, Scotland United Kingdom</p>
+          </div>
+
+          <ul class="contact-social-links">
+            <li>
+              <a href="#">
+                <i class="iconoir-dribbble"></i>
+                Dribbble
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="iconoir-twitter"></i>
+                Twitter
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="iconoir-instagram"></i>
+                Instagram
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="iconoir-linkedin"></i>
+                linkedin
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

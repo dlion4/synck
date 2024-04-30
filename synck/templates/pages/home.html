@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block body %}
+
+  <!-- Hero Section -->
+  {% include "pages/(home)/hero.html" %}
+
+  <!-- Client Section -->
+  {% include "(shared)/clients.html" %}
+  <!-- How We Do -->
+  {% include "(shared)/model.html" %}
+
+  <!-- Service Area -->
+  {% include "(shared)/services.html" %}
+
+  <!-- Case Studio -->
+  {% include "(shared)/products.html" %}
+
+  <!-- Pathway Section -->
+  {% include "(shared)/pathway.html" %}
+
+  <!-- Testimonial Section -->
+  {% include "(shared)/testimonial.html" %}
+  <!-- Project Section -->
+  {% include "(shared)/portfolio.html" %}
+  <!-- News Section -->
+  {% include "posts/(news)/news.html" %}
+  <!--Contact-->
+  {% include "(main)/contact.html" %}
+
+{% endblock body %}
