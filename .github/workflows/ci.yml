@@ -1,13 +1,8 @@
-name: CI
-
+name: Heroku Deployment
 
 on:
-
-
   push:
     branches: ["main"]
-
-
 
 jobs:
   validate_code:
@@ -21,8 +16,8 @@ jobs:
         with:
           python-version: "3.12"
       # Consider using pre-commit.ci for open source project
-      - name: Run pre-commit
-        uses: pre-commit/action@v3.0.1
+      # - name: Run pre-commit
+      #   uses: pre-commit/action@v3.0.1
 
       - name: Install dependencies
         run: |
@@ -38,5 +33,3 @@ jobs:
     steps:
       - name: Proceed to deployment
         run: echo "Action passed successfully"
-
- 
