@@ -76,3 +76,5 @@ sentry-sdk # https://github.com/getsentry/sentry-python
 # ------------------------------------------------------------------------------
 django-storages[s3]  # https://github.com/jschneier/django-storages
 django-anymail # https://github.com/anymail/django-anymail
+django-minify-html # https://github.com
+gunicorn
