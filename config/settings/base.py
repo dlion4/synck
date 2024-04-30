@@ -48,7 +48,7 @@ LOCALE_PATHS = [str(BASE_DIR / "locale")]
 # DATABASES
 # ------------------------------------------------------------------------------
 # https://docs.djangoproject.com/en/dev/ref/settings/#databases
-DATABASES = {"default": env.db("DATABASE_URL", default=os.environ.get("DATABASE_URL")}
+DATABASES = {"default": env.db("DATABASE_URL", default=os.environ.get("DATABASE_URL"))}
 DATABASES["default"]["ATOMIC_REQUESTS"] = True
 # https://docs.djangoproject.com/en/stable/ref/settings/#std:setting-DEFAULT_AUTO_FIELD
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
@@ -175,15 +175,15 @@ CACHE_MIDDLEWARE_SECONDS = (
 
 
 COMPRESS_ENABLED = True
-COMPRESS_CSS_HASHING_METHOD = 'content'
+COMPRESS_CSS_HASHING_METHOD = "content"
 COMPRESS_FILTERS = {
-    'css':[
-        'compressor.filters.css_default.CssAbsoluteFilter',
-        'compressor.filters.cssmin.rCSSMinFilter',
+    "css": [
+        "compressor.filters.css_default.CssAbsoluteFilter",
+        "compressor.filters.cssmin.rCSSMinFilter",
     ],
-    'js':[
-        'compressor.filters.jsmin.JSMinFilter',
-    ]
+    "js": [
+        "compressor.filters.jsmin.JSMinFilter",
+    ],
 }
 HTML_MINIFY = True
 KEEP_COMMENTS_ON_MINIFYING = True
@@ -201,9 +201,8 @@ STATICFILES_DIRS = [str(APPS_DIR / "static")]
 STATICFILES_FINDERS = [
     "django.contrib.staticfiles.finders.FileSystemFinder",
     "django.contrib.staticfiles.finders.AppDirectoriesFinder",
-
     # Add this
-    'compressor.finders.CompressorFinder',
+    "compressor.finders.CompressorFinder",
 ]
 
 # MEDIA
