@@ -104,11 +104,11 @@
 
   <!--Messages-->
   {% if messages %}
-    {% for message in messages %} 
-      <script type="text/javascript">
+    <script type="text/javascript">
+      {% for message in messages %} 
         toastr.{{ message.tags }}("{{ message }}");
-      </script>
-    {% endfor %} 
+      {% endfor %} 
+    </script>
   {% endif %}
   {% comment %} {% endcomment %}
 
