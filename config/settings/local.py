@@ -86,5 +86,4 @@ CORS_ALLOW_ALL_ORIGINS = True
 
 CSRF_TRUSTED_ORIGINS = [
     "https://synck-8712813c94f3.herokuapp.com",
-    "http://synck-8712813c94f3.herokuapp.com",
 ]
